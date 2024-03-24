@@ -24,4 +24,11 @@ public class CCJSqlParserTest {
 
         assertThat(timeOut).isEqualTo(123L);
     }
+    @Test
+    public void MyTest() {
+    }
+
+
+
+
 }
