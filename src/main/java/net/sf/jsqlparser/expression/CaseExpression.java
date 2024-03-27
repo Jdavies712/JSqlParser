@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import net.sf.jsqlparser.parser.ASTNodeAccessImpl;
 import net.sf.jsqlparser.statement.select.PlainSelect;
+import net.sf.jsqlparser.util.SelectUtils;
 
 /**
  * CASE/WHEN expression.
@@ -92,7 +93,7 @@ public class CaseExpression extends ASTNodeAccessImpl implements Expression {
     @Override
     public String toString() {
         return (usingBrackets ? "(" : "") + "CASE " + ((switchExpression != null) ? switchExpression + " " : "")
-                + PlainSelect.getStringList(whenClauses, false, false) + " "
+                + SelectUtils.getStringList(whenClauses, false, false) + " "
                 + ((elseExpression != null) ? "ELSE " + elseExpression + " " : "") + "END" + (usingBrackets ? ")" : "");
     }
 

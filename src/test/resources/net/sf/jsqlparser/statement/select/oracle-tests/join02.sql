@@ -15,3 +15,4 @@ select department_id as d_e_dept_id, e.last_name
 
 
 --@SUCCESSFULLY_PARSED_AND_DEPARSED first on Aug 3, 2021, 7:20:08 AM
+--@FAILURE: select department_id as d_e_dept_id,e.last_name from departments dfull outer join employees e using(department_id)order by department_id,e.last_name recorded first on 27-Mar-2024, 11:47:07 pm

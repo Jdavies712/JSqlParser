@@ -41,7 +41,7 @@ public class UnsupportedStatement implements Statement {
 
     @SuppressWarnings({"PMD.MissingBreakInSwitch", "PMD.SwitchStmtsShouldHaveDefault",
             "PMD.CyclomaticComplexity"})
-    public StringBuilder appendTo(StringBuilder builder) {
+  /*  public StringBuilder appendTo(StringBuilder builder) {
         int i = 0;
         for (String s : declarations) {
             if (i > 0) {
@@ -49,6 +49,14 @@ public class UnsupportedStatement implements Statement {
             }
             builder.append(s);
             i++;
+        }
+        return builder;
+    }
+*/
+    public StringBuilder appendTo(StringBuilder builder) {
+        if (declarations != null && !declarations.isEmpty()) {
+            // Use StringBuilder's efficient append method with delimiter
+            builder.append(String.join(" ", declarations));
         }
         return builder;
     }

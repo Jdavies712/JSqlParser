@@ -62,7 +62,17 @@ public abstract class MultipleExpression extends ASTNodeAccessImpl implements Ex
         childlist.add(index, express);
     }
 
-    public abstract String getStringExpression();
+ //   public abstract String getStringExpression();
+
+    public  String getStringExpression(){
+
+        if(this instanceof MultiAndExpression){
+            return "AND";
+        }
+
+        return "OR";
+    }
+
 
     @Override
     public String toString() {

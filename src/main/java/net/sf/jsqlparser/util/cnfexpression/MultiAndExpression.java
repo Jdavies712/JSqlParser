@@ -24,10 +24,10 @@ public final class MultiAndExpression extends MultipleExpression {
     public MultiAndExpression(List<Expression> childlist) {
         super(childlist);
     }
-
-    @Override
-    public String getStringExpression() {
-        return "AND";
+/*
+   @Override
+   public String getStringExpression() {
+       return "AND";
     }
-
+*/
 }

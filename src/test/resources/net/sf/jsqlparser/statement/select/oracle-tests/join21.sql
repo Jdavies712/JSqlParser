@@ -11,3 +11,4 @@ select * from sys.dual natural join sys.dual
 
 
 --@SUCCESSFULLY_PARSED_AND_DEPARSED first on Aug 3, 2021, 7:20:08 AM
+--@FAILURE: select*from sys.dualnatural join sys.dual recorded first on 27-Mar-2024, 11:47:07 pm

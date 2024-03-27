@@ -26,6 +26,8 @@ public class CCJSqlParserTest {
     }
     @Test
     public void MyTest() {
+
+        // added new test method
     }
 
 

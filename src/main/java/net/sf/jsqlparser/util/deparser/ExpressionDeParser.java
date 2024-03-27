@@ -114,6 +114,7 @@ import net.sf.jsqlparser.statement.select.ParenthesedSelect;
 import net.sf.jsqlparser.statement.select.Select;
 import net.sf.jsqlparser.statement.select.SelectVisitor;
 import net.sf.jsqlparser.statement.select.WithItem;
+import net.sf.jsqlparser.util.SelectUtils;
 
 import java.util.Iterator;
 import java.util.List;
@@ -704,7 +705,7 @@ public class ExpressionDeParser extends AbstractDeParser<Expression>
             buffer.append(" AS ");
             buffer.append(
                     cast.getColumnDefinitions().size() > 1
-                            ? "ROW(" + Select.getStringList(cast.getColumnDefinitions()) + ")"
+                            ? "ROW(" + SelectUtils.getStringList(cast.getColumnDefinitions()) + ")"
                             : cast.getColDataType().toString());
             buffer.append(")");
         } else {

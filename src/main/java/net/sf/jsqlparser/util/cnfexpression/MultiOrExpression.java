@@ -18,10 +18,10 @@ public final class MultiOrExpression extends MultipleExpression {
     public MultiOrExpression(List<Expression> childlist) {
         super(childlist);
     }
-
+/*
     @Override
     public String getStringExpression() {
-        return "OR";
-    }
-
+      return "OR";
+   }
+*/
 }

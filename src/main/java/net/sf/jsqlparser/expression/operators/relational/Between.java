@@ -62,8 +62,7 @@ public class Between extends ASTNodeAccessImpl implements Expression {
 
     @Override
     public String toString() {
-        return leftExpression + " " + (not ? "NOT " : "") + "BETWEEN " + betweenExpressionStart + " AND "
-                + betweenExpressionEnd;
+        return leftExpression + " " + (not ? "NOT " : "") + "BETWEEN " + betweenExpressionStart + " AND " + betweenExpressionEnd;
     }
 
     public Between withLeftExpression(Expression leftExpression) {
